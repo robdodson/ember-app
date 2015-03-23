@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="x-foo.html">
+  </head>
+  <body>
+
+    <script type="text/x-handlebars" data-template-name="application">
+      <h1>My Ember App</h1>
+      <p>Here is some dummy text in the main application template</p>
+      <a href="#/favorites">Favorites</a> | <a href="#/tacos">Tacos</a>
+      <x-foo>
+        {{outlet}}
+      </x-foo>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="favorites">
+      <h3>Here is a list of my favorites</h3>
+      <ul>
+        {{#each item in controller}}
+          <li>{{item.name}}</li>
+        {{/each}}
+      </ul>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="tacos">
+      <h3>Here is a menu for tacos</h3>
+      <hr>
+      <div>:: MENU ::</div>
+      {{#each item in controller}}
+        <p>~~ {{item.filling}} ~~</p>
+      {{/each}}
+      <hr>
+    </script>
+
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+    <script src="js/libs/handlebars-v1.3.0.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+    <script src="js/application.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="x-foo">
+  <template>
+    <h2>This is the x-foo area</h2>
+    <p style="background: red;">Some text renders above</p>
+    <content></content>
+    <p style="background: green;">Some text renders below</p>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'x-foo',
+    created: function() {
+      console.log('x-foo created');
+    }
+  });
+</script>

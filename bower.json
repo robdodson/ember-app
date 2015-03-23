@@ -1,0 +1,19 @@
+{
+  "name": "ember-app",
+  "version": "0.0.0",
+  "authors": [
+    "Rob Dodson <robdodson@google.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "polymer/polymer#0.8-preview",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#~0.6.0"
+  }
+}
